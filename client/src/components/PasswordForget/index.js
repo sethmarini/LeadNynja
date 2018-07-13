@@ -8,7 +8,7 @@ const PasswordForgetPage = () =>
 <div className="row h-100 colBlue">
   <div className="col-sm-6 my-auto text-center text-light colBlue">
     <img src={logo} alt=""/>
-    <h4>We give the finance sector a simple solution to capture and analyze leads.</h4>
+    <h4>We give the financial sector a simple solution to capture and distribute leads.</h4>
   </div>
   <div className="col-sm-6 colWhite h-100">
     <div className="row h-100">
