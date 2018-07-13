@@ -1,0 +1,53 @@
+/* 
+.table tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.table thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+} */
+
+#well-section {
+    max-height: 80%;
+    overflow-y: auto;
+}
+/* ---------------SEE Analytics.css  #root----------- */
+/* #root > div > div > div.row > div > div > div > div > div > div {
+   
+} */
+/* 
+#well-section table tbody tr td:nth-child(11) {
+    text-align: right;
+}
+
+#well-section table tbody tr td:nth-child(1),
+#well-section table thead tr th:nth-child(1) {
+    width: 70px;
+}
+#well-section table tbody tr td:nth-child(2),
+#well-section table thead tr th:nth-child(2) {
+    width: 70px;
+}
+#well-section table tbody tr td:nth-child(3),
+#well-section table thead tr th:nth-child(3) {
+    width: 70px;
+}
+#well-section table tbody tr td:nth-child(4),
+#well-section table thead tr th:nth-child(4) {
+    width: 70px;
+}
+#well-section table tbody tr td:nth-child(5),
+#well-section table thead tr th:nth-child(5) {
+    width: 70px;
+}
+
+#well-section table tbody tr td:nth-child(6),
+#well-section table thead tr th:nth-child(6) {
+    width: 100px;
+}
+ */ 

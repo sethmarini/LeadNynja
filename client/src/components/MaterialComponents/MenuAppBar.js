@@ -8,15 +8,13 @@ import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import TemporaryDrawer from '../1Material/TemporaryDrawer';
+import TemporaryDrawer from '../MaterialComponents/TemporaryDrawer';
 import { ListItemIcon } from '@material-ui/core';
 import ListItemText from '@material-ui/core/ListItemText';
 import account from '../Images/account.svg';
 import logout from '../Images/logout.svg';
 import { Link } from 'react-router-dom';
 import SignOutButton from '../SignOut';
-
-
 
 const styles = {
   root: {
@@ -60,7 +58,7 @@ class MenuAppBar extends React.Component {
           <Toolbar >
           <TemporaryDrawer />
             <Typography variant="title" color="inherit" className={classes.flex}>
-              LeadNynja - Beta v1.3
+            &ensp;LeadNynja - Beta v1.3
             </Typography>
             {auth && (
               <div>
@@ -73,6 +71,7 @@ class MenuAppBar extends React.Component {
                   <AccountCircle />
                 </IconButton>
                 <Menu
+                  className="text-center"
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
@@ -86,8 +85,6 @@ class MenuAppBar extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  {/* <Link to={'/account'}><MenuItem onClick={this.handleClose}>My account</MenuItem></Link>
-                  <SignOutButton><MenuItem onClick={this.handleClose}></MenuItem></SignOutButton> */}
                   <Link to={'/account'}>
                     <MenuItem onClick={this.handleClose}>
                       <ListItemIcon className={classes.icon}>

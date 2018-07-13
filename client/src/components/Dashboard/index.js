@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import withAuthorization from '../Session/withAuthorization';
 import LeadTable from './LeadTable';
-import MenuAppBar from '../1Material/MenuAppBar';
+import MenuAppBar from '../MaterialComponents/MenuAppBar'
+import  './Dashboard.css';
 
 class HomePage extends Component {
 
@@ -10,11 +11,10 @@ class HomePage extends Component {
     return (
       <div>
         <MenuAppBar />
+        <h1>Dashboard</h1>
         <div className="row">
-          <div className="col-md-1">
-          </div>
-          <div className="col-md-11">
-              <div className="container-fluid">
+          <div className="col">
+              <div className="container-fluid p-3" m-2>
               <LeadTable />
               </div>
           </div>

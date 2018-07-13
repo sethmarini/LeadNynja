@@ -5,7 +5,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ListItemComposition from '../1Material/ListItemComposition'
+import ListItemComposition from '../MaterialComponents/ListItemComposition'
 
 const styles = {
   list: {

@@ -1,19 +1,19 @@
 import React from 'react';
-import MenuAppBar from '../1Material/MenuAppBar';
-
+import MenuAppBar from '../MaterialComponents/MenuAppBar';
+import CalendarChart from './Calendar'
 
 const CalendarPage = () =>
-<div>
-<MenuAppBar />
-<div className="row">
-  <div className="col-md-1">
-  </div>
-  <div className="col-md-11">
-      <div className="container-fluid">
-      Coming Soon...
-      </div>
-  </div>
-</div>    
-</div>
+
+    <div>
+    <MenuAppBar />
+    <h1>Calendar</h1>
+        <div className="row">
+            <div className="col">
+                <div className="container-fluid p-3">
+                    <CalendarChart/>
+                </div>
+            </div>
+        </div>    
+    </div>
 
 export default CalendarPage;

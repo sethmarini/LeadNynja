@@ -47,6 +47,7 @@ class PasswordChangeForm extends Component {
     return (
       <form className="form-group" onSubmit={this.onSubmit}>
       <div className="jumbotron">
+        <h3 className="display-4">Change Password</h3>
         <div className="form-group">
           <input
             className="form-control"

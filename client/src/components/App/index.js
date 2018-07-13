@@ -8,6 +8,7 @@ import Dashboard from '../Dashboard';
 import AccountPage from '../Account';
 import AnalyticsPage from '../Analytics';
 import CalendarPage from '../Calendar';
+import AboutUsPage from '../AboutUs';
 import withAuthentication from '../Session/withAuthentication';
 import './App.css';
 
@@ -17,6 +18,7 @@ const App = () =>
       <Route exact path={'/landing'} component={() => <LandingPage />} />
       <Route exact path={'/signup'} component={() => <SignUpPage />} />
       <Route exact path={'/'} component={() => <SignInPage />} />
+      <Route exact path={'/aboutus'} component={() => <AboutUsPage />} />
       <Route exact path={'/pw-forget'} component={() => <PasswordForgetPage />} />
       <Route exact path='/dashboard' component={() => <Dashboard /> } />
       <Route exact path={'/account'} component={() => <AccountPage />} />

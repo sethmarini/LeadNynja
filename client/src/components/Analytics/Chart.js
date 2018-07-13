@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import leadApi from '../../util/leadApi';
 import { Bar } from 'react-chartjs-2'
+import './Analytics.css'
 
 class LeadChart extends Component {
   state = {

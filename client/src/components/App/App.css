@@ -1,3 +1,23 @@
 html, body, #root, .app {
     height: 100% !important;
 }
+
+button:focus {
+    outline: none !important;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+li:focus  {
+    background-color: #6297ff!important;
+}
+
+.MuiAppBar-colorPrimary-210 {
+    background-color: #006ae3 !important;
+}

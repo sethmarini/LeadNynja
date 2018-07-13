@@ -1,19 +1,19 @@
 import React from 'react';
 import LeadChart from './Chart'
-import MenuAppBar from '../1Material/MenuAppBar';
+import MenuAppBar from '../MaterialComponents/MenuAppBar';
+import './Analytics.css'
 
 const AnalyticsPage = () =>
     <div>
-    <MenuAppBar />
-    <div className="row">
-        <div className="col-md-1">
-        </div>
-        <div className="col-md-11">
-            <div className="container-fluid">
-            <LeadChart />
-            </div>
-        </div>
-    </div>    
+        <MenuAppBar />
+        <h1>Analytics</h1>
+            <div className="row">
+                <div className="col">
+                    <div className="container-fluid p-3">
+                    <LeadChart />
+                    </div>
+                </div>
+            </div>    
     </div>
 
 export default AnalyticsPage;
