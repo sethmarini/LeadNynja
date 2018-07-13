@@ -1,0 +1,28 @@
+{
+  "name": "leadnynja",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^6.0.0",
+    "express": "^4.15.4",
+    "firebase": "^5.0.4",
+    "mongoose": "^4.11.10",
+    "yarn": "^1.7.0"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "client": "cd client && npm run start",
+    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "10.1.0"
+  }
+}
