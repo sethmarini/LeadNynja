@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
+require('dotenv').config()
 
 // Set up a default port, configure mongoose, configure our middleware/bodyParser
 const PORT = process.env.PORT || 3001;
@@ -12,9 +13,9 @@ app.use(bodyParser.json());
 
 // Serve up static assets if in production (running on Heroku)/use this to deploy to heroku
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("build"));
+  app.use(express.static("client/build"));
 } else {
-  app.use(express.static(__dirname + "public"));
+  app.use(express.static(__dirname + "/client/public"));
 }
 
 // enable CORS, use:
