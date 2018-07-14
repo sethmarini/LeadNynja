@@ -16,18 +16,18 @@ const DnDCalendar = withDragAndDrop(Calendar);
 //CALENDAR
 class CalendarChart extends Component {
   state = {
-    events: [
-      {
-        start: new Date(),
-        end: new Date(moment().add(1, "days")),
-        title: "Some Event"
+    events: []
+  }
 
-        // event date time
-        // start: new Date(),
-        // end: new Date(moment().add(1, "days")),
-        // title: "Some Event"
-      }
-    ]
+  componentDidMount(){
+    this.getSavedEvents();
+  }
+
+  // this is to get all the articles from the DB
+  getSavedEvents = () => {
+    eventApi.getEvent().then(res => {
+      this.setState({ events: res.data });
+    });
   };
 
   onEventResize = (type, { event, start, end, allDay }) => {
@@ -44,14 +44,19 @@ class CalendarChart extends Component {
 
   saveEvent = (e) =>{
     e.preventDefault();
+  // use javascript date constructor to create a valid date 
+    let start = new Date(Date.parse(document.getElementById("date").value + " " + document.getElementById("time").value))
   eventApi.saveEvent({
-    event: document.getElementById("event").value,
-    date: document.getElementById("date").value,
-    time: document.getElementById("time").value
-});
+    title: document.getElementById("event").value,
+    start: start,
+    // day in seconds
+    end: new Date(Date.parse(start) + 86400000)
+  });
+  this.getSavedEvents();
 }
 
   render() {
+    console.log(this.state.events);
     return (
       <div className="CalendarPage">
       
@@ -85,7 +90,6 @@ class CalendarChart extends Component {
                 events={this.state.events}
                 onEventDrop={this.onEventDrop}
                 onEventResize={this.onEventResize}
-                resizable
                 style={{ height: "80vh", width: "80vh"}}
                 />
               </div>
